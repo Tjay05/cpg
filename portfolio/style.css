@@ -1,0 +1,260 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  margin-inline: auto;
+}
+
+body {
+  background-color: #ECE7E2;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  padding-block: 1rem;
+  background-color: #4A7766;
+  position: sticky;
+  top: 0;
+}
+
+nav.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+span.logo {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #ECE7E2;
+  letter-spacing: -3px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+ul.nav_links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  color: #ECE7E2;
+  font-size: 1.1rem;
+}
+
+ul.nav_links li a.nav_link {
+  color: inherit;
+  text-decoration: none;
+  padding-block: .5rem;
+  border-bottom: 2px solid transparent;
+  transition: all ease-in-out 300ms;
+}
+
+ul.nav_links li a.nav_link:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+img.github {
+  width: 60%;
+}
+
+section.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 6rem;
+  padding-block: 6rem 5rem;
+}
+
+section.home .welcome {
+  width: 50%;
+}
+
+p.hello {
+  font-size: 1.3rem;
+  color: #333333;
+  font-weight: 500;
+}
+
+h1 {
+  color: #4A7766;
+  font-weight: 700;
+  margin-block: .3rem 1rem;
+  font-size: 5.5rem;
+  line-height: 1.1;
+}
+
+.welcome a.contact {
+  font-weight: 700;
+  color: #333333;
+  border-bottom: 2px solid transparent;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+}
+
+.welcome a.contact:hover {
+  border-bottom-color: #4A7766;
+}
+
+section.home img.photo {
+  border-radius: 50%;
+  width: 30%;
+  height: 340px;
+}
+
+section.about {
+  padding-block: 5rem 6rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+section h2 {
+  color: #4A7766;
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+
+.divider {
+  width: 100%;
+  border-top: 2px solid #4A7766;
+}
+
+p.about {
+  width: 80%;
+  margin-inline: auto;
+  margin-block: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333333;
+}
+
+aside.experience {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 3rem;
+  text-align: center;
+  color: #333333;
+}
+
+.skill p {
+  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2rem;
+}
+
+.skill span {
+  font-weight: 500;
+  font-size: .8rem;
+  color: #61605F;
+  padding-block: 1rem .1rem;
+  border-bottom: 1px solid #3333336b;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+section.contact {
+  padding-block: 5rem 2rem;
+}
+
+section.contact .divider {
+  width: 70%;
+}
+
+p.contact {
+  width: 80%;
+  margin-inline: auto;
+  margin-block: 2rem;
+  font-size: 1.1rem;
+  color: #333333;
+}
+
+form {
+  width: 50%;
+  margin-inline: auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #333333;
+  font-size: .9rem;
+  font-family: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #61605F;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+button {
+  font-weight: 600;
+  font-size: 1rem;
+  place-self: center;
+  background-color: transparent;
+  text-transform: uppercase;
+  border: none;
+  font-family: inherit;
+  padding: .5rem;
+  border-bottom: 2px solid #4A7766;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+footer {
+  padding-block: 1rem;
+  background-color: #4A7766;
+}
+
+nav.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul.social_icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+a.social_link img {
+  width: 40px;
+  padding-block: .5rem;
+  border-bottom: 2px solid transparent;
+  transition: all 300ms ease-in;
+}
+
+a.social_link img:hover {
+  border-bottom-color: #333333;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #ECE7E2;
+  font-weight: 600;
+  margin-block: 1rem;
+}
