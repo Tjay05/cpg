@@ -17,6 +17,7 @@ body {
 }
 
 /* Mobile styles */
+/* Header Styles */
 header {
   padding-block: 1rem;
   background-color: #4A7766;
@@ -24,6 +25,7 @@ header {
   top: 0;
 }
 
+/* Navbar Styles */
 nav.navbar {
   display: flex;
   align-items: center;
@@ -130,9 +132,42 @@ ul.nav_links li a.nav_link:hover {
 
 img.github {
   width: 60%;
+}*/
+
+/* Main Styles */
+main.container {
+  margin-block: 1rem;
 }
 
 section.home {
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+section.home p.hello {
+  font-size: 1rem;
+  color: #333333;
+  font-weight: 500;
+}
+
+h1 {
+  text-align: center;
+  color: #4A7766;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+section.home img.photo {
+  align-self: center;
+  border-radius: 50%;
+  width: 45%;
+  height: 145.8px;
+  border: 4px solid #d0701038;
+  margin-block: 1rem;
+}
+
+/* section.home {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -158,26 +193,13 @@ h1 {
   line-height: 1.1;
 }
 
-.welcome a.contact {
-  font-weight: 700;
-  color: #333333;
-  border-bottom: 2px solid transparent;
-  font-size: 1.2rem;
-  text-decoration: none;
-  transition: all 300ms ease-in-out;
-}
-
-.welcome a.contact:hover {
-  border-bottom-color: #4A7766;
-}
-
 section.home img.photo {
   border-radius: 50%;
   width: 30%;
   height: 340px;
-}
+} */
 
-section.about {
+/*section.about {
   padding-block: 5rem 6rem;
 }
 
