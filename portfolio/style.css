@@ -229,6 +229,59 @@ section.about aside.experience {
   font-family: "Space Grotesk", sans-serif;
 }
 
+/* Contact Section */
+section.contact {
+  padding-block: 2rem;
+}
+
+p.contact {
+  margin-block: .5rem 1rem;
+  font-size: 1rem;
+  color: #333333;
+}
+
+form {
+  width: 100%;
+  margin-block: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #333333;
+  font-size: .8rem;
+  font-family: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #61605F;
+  padding-top: .5rem;
+  margin-bottom: 2rem;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+button {
+  font-weight: 600;
+  font-size: 1rem;
+  place-self: center;
+  background-color: transparent;
+  text-transform: uppercase;
+  border: none;
+  font-family: inherit;
+  padding: .5rem;
+  border-bottom: 2px solid #4A7766;
+  margin-top: .5rem;
+  color: #333333;
+}
+
 /* section.home {
   display: flex;
   justify-content: space-between;
@@ -284,21 +337,14 @@ aside.experience {
 }
 
 .skill p {
-  font-weight: 600;
-  font-family: "Space Grotesk", sans-serif;
   font-size: 2rem;
 }
 
 .skill span {
-  font-weight: 500;
-  font-size: .8rem;
-  color: #61605F;
   padding-block: 1rem .1rem;
-  border-bottom: 1px solid #3333336b;
-  font-family: "Space Grotesk", sans-serif;
-}
+}*/
 
-section.contact {
+/*section.contact {
   padding-block: 5rem 2rem;
 }
 
@@ -318,25 +364,14 @@ form {
   width: 50%;
   margin-inline: auto;
   margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
 }
 
 label {
-  text-transform: uppercase;
-  font-weight: 500;
-  color: #333333;
   font-size: .9rem;
-  font-family: inherit;
 }
 
 input, textarea {
-  font-family: inherit;
-  border: none;
-  background: transparent;
-  border-bottom: 2px solid #61605F;
   padding-top: 1rem;
-  margin-bottom: 2rem;
 }
 
 input:focus, textarea:focus {
@@ -344,17 +379,7 @@ input:focus, textarea:focus {
 }
 
 button {
-  font-weight: 600;
-  font-size: 1rem;
-  place-self: center;
-  background-color: transparent;
-  text-transform: uppercase;
-  border: none;
-  font-family: inherit;
-  padding: .5rem;
-  border-bottom: 2px solid #4A7766;
   margin-top: 2rem;
-  cursor: pointer;
 }
 
 footer {
