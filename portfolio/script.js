@@ -1,18 +1,18 @@
 const hBurger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
-const offCanvas = document.getElementById('offside-canvas');
+const dropNav = document.getElementById('drop-nav');
 
 hBurger.addEventListener('click', function () {
-  if (offCanvas.className === '') {
-    offCanvas.className = 'offside-canvas';
+  if (dropNav.className === '') {
+    dropNav.className = 'drop-nav';
     hBurger.classList.add('open');
     
     menu.addEventListener('click', () => {
       hBurger.classList.remove('open');
-      offCanvas.classList.remove('offside-canvas');
+      dropNav.classList.remove('drop-nav');
     })
   } else {
     hBurger.classList.remove('open');
-    offCanvas.classList.remove('offside-canvas');
+    dropNav.classList.remove('drop-nav');
   }
 });

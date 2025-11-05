@@ -39,7 +39,7 @@ span.logo {
   font-family: "Space Grotesk", sans-serif;
 }
 
-nav.navbar #offside-canvas {
+nav.navbar #drop-nav {
   background-color: #4A7766;
   flex-direction: column;
   position: absolute;
@@ -50,17 +50,17 @@ nav.navbar #offside-canvas {
   transition: all 0.4s ease-in-out;
 }
 
-nav.navbar #offside-canvas ul.nav_links {
+nav.navbar #drop-nav ul.nav_links {
   display: none;
 }
 
-nav.navbar #offside-canvas.offside-canvas {
+nav.navbar #drop-nav.drop-nav {
   height: 25vh;
   border-top: 2px solid #ECE7E2;
   padding-block: 1rem;
 }
 
-nav.navbar #offside-canvas.offside-canvas ul.nav_links {
+nav.navbar #drop-nav.drop-nav ul.nav_links {
   display: flex;
   flex-direction: column;
   justify-content: center;
