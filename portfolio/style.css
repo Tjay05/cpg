@@ -187,6 +187,7 @@ section.about .header .divider {
 
 section.about p.about {
   margin-block: .5rem 1rem;
+  color: #333333;
   font-size: 1rem;
   line-height: 1.8;
 }
@@ -373,6 +374,43 @@ footer p {
     height: 340px;
   }
 
+  /* About Section */
+  section.about {
+    padding-block: 5rem 6rem;
+  }
+
+  section.about .header .divider {
+    width: 75%;
+    border-top-width: 2px;
+  }
+  
+  section h2 {
+    font-size: 3.5rem;
+  }
+  
+  section.about p.about {
+    width: 80%;
+    margin-inline: auto;
+    margin-block: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  section.about aside.experience {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-block: 3rem;
+  }
+  
+  .skill p {
+    font-size: 2rem;
+  }
+  
+  .skill span {
+    padding-block: 1rem .1rem;
+    font-size: 1rem;
+  }
+
   /* Active Styles */
   ul.nav_links li a.nav_link:hover {
     color: #fff;
@@ -384,36 +422,6 @@ footer p {
     color: #4A7766;
   }
 }
-
-/*section.about {
-  padding-block: 5rem 6rem;
-}
-
-section h2 {
-  font-size: 3.5rem;
-}
-
-p.about {
-  width: 80%;
-  margin-inline: auto;
-  margin-block: 2rem;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #333333;
-}
-
-aside.experience {
-  justify-content: space-between;
-  margin-block: 3rem;
-}
-
-.skill p {
-  font-size: 2rem;
-}
-
-.skill span {
-  padding-block: 1rem .1rem;
-}*/
 
 /*section.contact {
   padding-block: 5rem 2rem;
