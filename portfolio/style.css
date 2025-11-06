@@ -75,6 +75,12 @@ nav.navbar #drop-nav {
 
 nav.navbar #drop-nav ul.nav_links {
   display: none;
+  list-style: none;
+  color: #ECE7E2;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
 }
 
 nav.navbar #drop-nav.drop-nav {
@@ -85,12 +91,6 @@ nav.navbar #drop-nav.drop-nav {
 
 nav.navbar #drop-nav.drop-nav ul.nav_links {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  color: #ECE7E2;
-  gap: .5rem;
 }
 
 ul.nav_links li a.nav_link {
@@ -136,6 +136,10 @@ header .hamburger {
 
 .hamburger.open span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+}
+
+a.mssg {
+  display: none;
 }
 
 /*ul.nav_links {
@@ -268,7 +272,7 @@ input:focus, textarea:focus {
   outline: none;
 }
 
-button {
+form button {
   font-weight: 600;
   font-size: 1rem;
   place-self: center;
@@ -311,6 +315,49 @@ footer p {
   color: #ECE7E2;
   font-weight: 600;
   margin-block: 2rem 0rem;
+}
+
+/* Desktop Styles */
+@media (min-width: 48rem) {
+  /* Header Styles */
+  header {
+    padding-block: 1rem;
+  }
+
+  nav.navbar #drop-nav {
+    width: unset;
+    position: relative;
+    height: unset;
+    flex-direction: row;
+    top: unset;
+    background-color: transparent;
+  }
+
+  nav.navbar #drop-nav ul.nav_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: unset;
+    gap: 2rem;
+    font-size: 1.2rem;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  a.mssg {
+    display: block;
+    padding: 0.5rem;
+    background-color: transparent;
+    font-family: inherit;
+    border: 2px solid #ECE7E2;
+    border-radius: 10px;
+    color: #ECE7E2;
+    font-weight: 500;
+    text-transform: unset;
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
 }
 
 /* section.home {
