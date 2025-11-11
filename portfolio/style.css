@@ -13,7 +13,7 @@
 }
 
 .divider {
-  border-top: 1px solid #4A7766;
+  border-top: 1px solid #4a7766;
   width: 50%;
 }
 
@@ -26,12 +26,12 @@
 
 /* Base Styles */
 body {
-  background-color: #ECE7E2;
+  background-color: #ece7e2;
   font-family: "Poppins", sans-serif;
 }
 
 section h2 {
-  color: #4A7766;
+  color: #4a7766;
   font-weight: 700;
   font-size: 1.5rem;
   margin-block: 1rem;
@@ -40,8 +40,8 @@ section h2 {
 /* Mobile styles */
 /* Header Styles */
 header {
-  padding-block: .5rem;
-  background-color: #4A7766;
+  padding-block: 0.5rem;
+  background-color: #4a7766;
   position: sticky;
   top: 0;
 }
@@ -57,13 +57,13 @@ span.logo {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.8rem;
-  color: #ECE7E2;
+  color: #ece7e2;
   letter-spacing: -3px;
   font-family: "Space Grotesk", sans-serif;
 }
 
 nav.navbar #drop-nav {
-  background-color: #4A7766;
+  background-color: #4a7766;
   flex-direction: column;
   position: absolute;
   width: 100%;
@@ -76,16 +76,16 @@ nav.navbar #drop-nav {
 nav.navbar #drop-nav ul.nav_links {
   display: none;
   list-style: none;
-  color: #ECE7E2;
+  color: #ece7e2;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 nav.navbar #drop-nav.drop-nav {
   height: 25vh;
-  border-top: 2px solid #ECE7E2;
+  border-top: 2px solid #ece7e2;
   padding-block: 1rem;
 }
 
@@ -96,12 +96,12 @@ nav.navbar #drop-nav.drop-nav ul.nav_links {
 ul.nav_links li a.nav_link {
   color: inherit;
   text-decoration: none;
-  padding-block: .5rem;
+  padding-block: 0.5rem;
   border-bottom: 2px solid transparent;
   transition: all ease-in-out 300ms;
 }
 
-header .hamburger {  
+header .hamburger {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -113,8 +113,8 @@ header .hamburger {
 
 .hamburger::marker {
   display: none;
-  color: #ECE7E2;
-  background: #ECE7E2;
+  color: #ece7e2;
+  background: #ece7e2;
 }
 
 .hamburger span {
@@ -122,7 +122,7 @@ header .hamburger {
   width: 100%;
   height: 3px;
   border-radius: 5px;
-  background-color: #ECE7E2;
+  background-color: #ece7e2;
   transition: transform 0.4s ease-in-out;
 }
 
@@ -162,7 +162,7 @@ section.home p.hello {
 
 h1 {
   text-align: center;
-  color: #4A7766;
+  color: #4a7766;
   font-weight: 700;
   font-size: 2rem;
 }
@@ -186,7 +186,7 @@ section.about .header .divider {
 }
 
 section.about p.about {
-  margin-block: .5rem 1rem;
+  margin-block: 0.5rem 1rem;
   color: #333333;
   font-size: 1rem;
   line-height: 1.8;
@@ -210,9 +210,9 @@ section.about aside.experience {
 
 .skill span {
   font-weight: 500;
-  font-size: .8rem;
-  color: #61605F;
-  padding-block: 1rem .3rem;
+  font-size: 0.8rem;
+  color: #61605f;
+  padding-block: 1rem 0.3rem;
   border-bottom: 1px solid #3333336b;
   font-family: "Space Grotesk", sans-serif;
 }
@@ -223,7 +223,7 @@ section.contact {
 }
 
 p.contact {
-  margin-block: .5rem 1rem;
+  margin-block: 0.5rem 1rem;
   font-size: 1rem;
   color: #333333;
 }
@@ -239,20 +239,22 @@ label {
   text-transform: uppercase;
   font-weight: 500;
   color: #333333;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-family: inherit;
 }
 
-input, textarea {
+input,
+textarea {
   font-family: inherit;
   border: none;
   background: transparent;
-  border-bottom: 2px solid #61605F;
-  padding-top: .5rem;
+  border-bottom: 2px solid #61605f;
+  padding-top: 0.5rem;
   margin-bottom: 2rem;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: none;
 }
 
@@ -264,16 +266,16 @@ form button {
   text-transform: uppercase;
   border: none;
   font-family: inherit;
-  padding: .5rem;
-  border-bottom: 2px solid #4A7766;
-  margin-top: .5rem;
+  padding: 0.5rem;
+  border-bottom: 2px solid #4a7766;
+  margin-top: 0.5rem;
   color: #333333;
 }
 
 /* Footer Styles */
 footer {
   padding-block: 1rem;
-  background-color: #4A7766;
+  background-color: #4a7766;
 }
 
 nav.footer {
@@ -296,7 +298,7 @@ a.social_link img {
 footer p {
   text-align: center;
   font-size: 0.6rem;
-  color: #ECE7E2;
+  color: #ece7e2;
   font-weight: 600;
   margin-block: 2rem 0rem;
 }
@@ -334,14 +336,14 @@ footer p {
     padding: 0.5rem;
     background-color: transparent;
     font-family: inherit;
-    border: 2px solid #ECE7E2;
+    border: 2px solid #ece7e2;
     border-radius: 10px;
-    color: #ECE7E2;
+    color: #ece7e2;
     font-weight: 500;
     text-transform: unset;
     font-size: 0.8rem;
     text-decoration: none;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 
   /* Main Styles */
@@ -363,11 +365,11 @@ footer p {
 
   h1 {
     text-align: left;
-    margin-block: .3rem 1rem;
+    margin-block: 0.3rem 1rem;
     font-size: 5.5rem;
     line-height: 1.1;
   }
-  
+
   section.home img.photo {
     border-radius: 50%;
     width: 30%;
@@ -383,11 +385,11 @@ footer p {
     width: 75%;
     border-top-width: 2px;
   }
-  
+
   section h2 {
     font-size: 3.5rem;
   }
-  
+
   section.about p.about {
     width: 80%;
     margin-inline: auto;
@@ -401,13 +403,13 @@ footer p {
     justify-content: space-between;
     margin-block: 3rem;
   }
-  
+
   .skill p {
     font-size: 2rem;
   }
-  
+
   .skill span {
-    padding-block: 1rem .1rem;
+    padding-block: 1rem 0.1rem;
     font-size: 1rem;
   }
 
@@ -420,7 +422,7 @@ footer p {
     width: 70%;
     border-top-width: 2px;
   }
-  
+
   p.contact {
     width: 80%;
     margin-inline: auto;
@@ -433,15 +435,16 @@ footer p {
     margin-inline: auto;
     margin-top: 2rem;
   }
-  
+
   label {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
-  
-  input, textarea {
+
+  input,
+  textarea {
     padding-top: 1rem;
   }
-  
+
   form button {
     margin-top: 2rem;
   }
@@ -453,7 +456,7 @@ footer p {
 
   a.social_link img {
     width: 40px;
-    padding-block: .5rem;
+    padding-block: 0.5rem;
     border-bottom: 2px solid transparent;
     transition: all 300ms ease-in;
   }
@@ -465,12 +468,12 @@ footer p {
   }
 
   a.mssg:hover {
-    background-color: #ECE7E2;
-    color: #4A7766;
+    background-color: #ece7e2;
+    color: #4a7766;
   }
-  
+
   a.social_link img:hover {
-    border-bottom-color: #ECE7E2;
+    border-bottom-color: #ece7e2;
   }
 
   footer p {
