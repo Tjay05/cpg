@@ -8,7 +8,7 @@ app.use(express.json());
 const PORT = 4000;
 
 const allowedOrigins = [
-  'http://127.0.0.1:5500'           // local development
+  'http://127.0.0.1:5500'   // local development
 ];
 
 app.use(
