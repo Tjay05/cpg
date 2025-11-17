@@ -272,6 +272,27 @@ form button {
   color: #333333;
 }
 
+/* Message Section */
+section#messages .divider {
+  display: none;
+}
+
+section#messages .mssg {
+  background-color: #4a7766ec;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  color: #ece7e2;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+section#messages .mssg h3 {
+  font-size: 1.25rem;
+}
+
 /* Footer Styles */
 footer {
   padding-block: 1rem;
@@ -447,6 +468,15 @@ footer p {
 
   form button {
     margin-top: 2rem;
+  }
+
+  section#messages .mssg {
+    margin-block: 2rem;
+  }
+  
+  section#messages .divider {
+    display: inline-block;
+    border-top-width: 2px;
   }
 
   /* Footer Styles */
