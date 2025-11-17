@@ -5,7 +5,7 @@ const admin = require("firebase-admin");
 const nodemailer = require("nodemailer");
 const serviceAcctPath = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT) || require("./cpg-portfolio-firebase-adminsdk.json");
 
-const serviceAccount = require(serviceAcctPath);
+const serviceAccount = serviceAcctPath;
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL:"https://cpg-portfolio.firebaseio.com"
