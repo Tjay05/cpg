@@ -93,7 +93,7 @@ app.post("/contact", async (req, res) => {
     };
 
     const docRef = await db.collection('contacts').add(contact);
-    await sendNotification(contact);
+    // await sendNotification(contact);
 
     res.status(200).json({ id: docRef.id, mssg: " Message sent successfully!" })
   } catch (err) {
