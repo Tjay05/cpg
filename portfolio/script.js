@@ -19,31 +19,10 @@ hBurger.addEventListener('click', function () {
   }
 });
 
-// Sendng new message function
-const handleSubmit = async (url, username, email, message, error, success) => {
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({ name: username, email, message })
-  })
-  const data = await response.json();
-  if(!response.ok) {
-    console.log(data.error);
-    error.textContent = data.message || "An unknown error occurred";
-    error.style.display = 'block';
-  }
-  if (response.ok) {
-    console.log(data);
-    success.textContent = data.mssg;
-    success.style.display = 'block';
-    contactForm.reset();
-    username.value = '';
-    email.value = '';
-    message.value = '';
-  }
-}
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
+  error.style.display = 'none';
+  success.style.display = 'none';
   e.preventDefault();
 
   const username = document.getElementById('name').value;
@@ -52,8 +31,31 @@ contactForm.addEventListener('submit', (e) => {
   const error = document.getElementById('error');
   const success = document.getElementById('success');
 
-  handleSubmit('https://cpg-portfolio.onrender.com/contact', username, email, message, error, success);
-
+  try {
+    const response = await fetch('https://cpg-portfolio.onrender.com/contact', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ name: username, email, message })
+    })
+    const data = await response.json();
+    if(!response.ok) {
+      console.log(data.error);
+      error.textContent = data.error || "An unknown error occurred";
+      error.style.display = 'block';
+    }
+    if (response.ok) {
+      console.log(data);
+      success.textContent = data.mssg;
+      success.style.display = 'block';
+      username.value = '';
+      email.value = '';
+      message.value = '';
+    }
+  } catch (error) {
+    error.textContent = "Failed to send message, check your internet connection";
+    error.style.display = 'block';
+    console.error(error);
+  }
 })
 
 async function loadMessages() {
