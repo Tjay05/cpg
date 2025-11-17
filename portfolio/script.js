@@ -21,8 +21,6 @@ hBurger.addEventListener('click', function () {
 
 
 contactForm.addEventListener('submit', async (e) => {
-  error.style.display = 'none';
-  success.style.display = 'none';
   e.preventDefault();
 
   const username = document.getElementById('name').value;
@@ -32,6 +30,9 @@ contactForm.addEventListener('submit', async (e) => {
   const success = document.getElementById('success');
 
   try {
+    error.style.display = 'none';
+    success.style.display = 'none';
+
     const response = await fetch('https://cpg-portfolio.onrender.com/contact', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
