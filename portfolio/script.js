@@ -20,7 +20,7 @@ hBurger.addEventListener('click', function () {
 });
 
 // Sendng new message function
-const handleSubmit = async (url, username, email, message) => {
+const handleSubmit = async (url, username, email, message, error, success) => {
   const response = await fetch(url, {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
@@ -29,9 +29,17 @@ const handleSubmit = async (url, username, email, message) => {
   const data = await response.json();
   if(!response.ok) {
     console.log(data.error);
+    error.textContent = data.message || "An unknown error occurred";
+    error.style.display = 'block';
   }
   if (response.ok) {
     console.log(data);
+    success.textContent = data.mssg;
+    success.style.display = 'block';
+    contactForm.reset();
+    username.value = '';
+    email.value = '';
+    message.value = '';
   }
 }
 
@@ -41,8 +49,10 @@ contactForm.addEventListener('submit', (e) => {
   const username = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
+  const error = document.getElementById('error');
+  const success = document.getElementById('success');
 
-  handleSubmit('https://cpg-portfolio.onrender.com/contact', username, email, message);
+  handleSubmit('https://cpg-portfolio.onrender.com/contact', username, email, message, error, success);
 
 })
 
