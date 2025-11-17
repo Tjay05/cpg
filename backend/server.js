@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const admin = require("firebase-admin");
 const nodemailer = require("nodemailer");
-const serviceAccount = require("./cpg-portfolio-firebase-adminsdk.json");
+const serviceAccount = require("./cpg-portfolio-firebase-adminsdk.json") || process.env.FIREBASE_SERVICE_ACCOUNT;
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
