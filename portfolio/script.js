@@ -42,7 +42,7 @@ contactForm.addEventListener('submit', (e) => {
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
 
-  handleSubmit('http://localhost:4000/contact', username, email, message);
+  handleSubmit('https://cpg-portfolio.onrender.com/contact', username, email, message);
 
 })
 
@@ -51,7 +51,7 @@ async function loadMessages() {
   container.innerHTML = 'Loading messages...';
 
   try {
-    const res = await fetch("http://localhost:4000/contacts")
+    const res = await fetch("https://cpg-portfolio.onrender.com/contacts")
     const messages = await res.json();
 
     container.innerHTML = messages.map(mssg => `
