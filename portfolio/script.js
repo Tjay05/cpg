@@ -19,6 +19,7 @@ hBurger.addEventListener('click', function () {
   }
 });
 
+// Sendng new message function
 const handleSubmit = async (url, username, email, message) => {
   const response = await fetch(url, {
     method: 'POST',
@@ -44,3 +45,27 @@ contactForm.addEventListener('submit', (e) => {
   handleSubmit('http://localhost:4000/contact', username, email, message);
 
 })
+
+async function loadMessages() {
+  const container = document.getElementById('mssg-container');
+  container.innerHTML = 'Loading messages...';
+
+  try {
+    const res = await fetch("http://localhost:4000/contacts")
+    const messages = await res.json();
+
+    container.innerHTML = messages.map(mssg => `
+      <div class="mssg">
+        <h3>${mssg.name}</h3>
+        <p class="email">${mssg.email}</p>
+        <p class="messg">${mssg.message}</p>
+        <span class="timestamp">${new Date(mssg.receivedAt._seconds * 1000).toLocaleString()}</span>
+      </div>
+    `).join("");
+  } catch (err) {
+    container.innerHTML = "<p>Failed to load messages😪</p>";
+    console.error(err);
+  }
+}
+
+loadMessages()
