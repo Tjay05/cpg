@@ -2,6 +2,9 @@ const hBurger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
 const dropNav = document.getElementById('drop-nav');
 
+const error = document.getElementById('error');
+const success = document.getElementById('success');
+const submitBtn = document.getElementById('submit-btn');
 const contactForm = document.getElementById('contact-form');
 
 hBurger.addEventListener('click', function () {
@@ -21,42 +24,47 @@ hBurger.addEventListener('click', function () {
 
 
 contactForm.addEventListener('submit', async (e) => {
+  error.style.display = 'none';
+  success.style.display = 'none';
+
   e.preventDefault();
 
   const username = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
-  const error = document.getElementById('error');
-  const success = document.getElementById('success');
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Submitting...";
 
   try {
-    error.style.display = 'none';
-    success.style.display = 'none';
-
     const response = await fetch('https://cpg-portfolio.onrender.com/contact', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({ name: username, email, message })
     })
     const data = await response.json();
-    if(!response.ok) {
+    if (!response.ok) {
       console.log(data.error);
       error.textContent = data.error || "An unknown error occurred";
       error.style.display = 'block';
+      return;
     }
-    if (response.ok) {
-      console.log(data);
-      success.textContent = data.mssg;
-      success.style.display = 'block';
-      username.value = '';
-      email.value = '';
-      message.value = '';
-    }
+
+    console.log(data);
+    success.textContent = data.mssg;
+    success.style.display = 'block';
+    contactForm.reset();
+    username.value = '';
+    email.value = '';
+    message.value = '';
   } catch (error) {
     error.textContent = "Failed to send message, check your internet connection";
     error.style.display = 'block';
     console.error(error);
-  }
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "send message";
+}
 })
 
 async function loadMessages() {
@@ -66,6 +74,11 @@ async function loadMessages() {
   try {
     const res = await fetch("https://cpg-portfolio.onrender.com/contacts")
     const messages = await res.json();
+
+    if (messages.length === 0) {
+      container.innerHTML = "<p>No messages yet!</p>";
+      return;
+    }
 
     container.innerHTML = messages.map(mssg => `
       <div class="mssg">
